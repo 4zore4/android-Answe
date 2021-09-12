@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:clipChildren="false"
     android:background="#FDE7F1">
 
     <RelativeLayout
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:background="#FFFFFF"
@@ -25,19 +28,31 @@
                 android:text="小测试"
                 tools:text="小测试"
                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="隐藏"
+                android:id="@+id/btn_right"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="#444444"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"/>
     </RelativeLayout>
 
     <androidx.viewpager.widget.ViewPager
+        android:layout_below="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="471dp"
         android:layout_marginTop="12dp"
         android:id="@+id/viewpager"
-        >
+        android:clipChildren="false">
 
 
     </androidx.viewpager.widget.ViewPager>
 
     <TextView
+        android:layout_below="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_bottom_text"
@@ -52,6 +67,7 @@
         android:text="小测试"
         tools:text="已累计答对10题"
         />
+    <include
+        layout="@layout/fragment_layout"/>
 
-
-</LinearLayout>
+</RelativeLayout>

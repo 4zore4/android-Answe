@@ -10,139 +10,123 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="471dp"
-        android:layout_marginRight="12dp"
         android:layout_marginLeft="12dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="12dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="10dp"
-        app:cardElevation="2dp"
-        >
+        app:cardElevation="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/contentTitle"
                 android:layout_width="match_parent"
-                android:id="@+id/test_view_bottomf"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
+                android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
-                android:ellipsize="end"
-                android:text="女性排卵后，体温会升高吗？"
+                android:text="----测试标题？---"
                 android:textColor="#181818"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginTop="30dp"
-                android:textAlignment="center"
-                >
+                android:layout_marginRight="16dp"
+                android:textAlignment="center"/>
 
-                <TextView
-                    android:id="@+id/tv_option1"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/test_button_selector"
-                    android:gravity="center"
-                    android:text="不知道"
-                    android:textColor="@color/cardview_dark_background" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="11dp"
-                    tools:background="@color/design_default_color_surface"
-                    />
-            </RelativeLayout>
-            <RelativeLayout
+            <com.example.answer.view.ButtonSelectView
+                android:id="@+id/first_option_layout"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
-                android:textAlignment="center"
-                >
+                android:layout_marginRight="16dp"
+                android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/tv_option2"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/test_button_selector"
-                    android:gravity="center"
-                    android:text="不知道"
-                    android:textColor="@color/cardview_dark_background" />
+            <com.example.answer.view.ButtonSelectView
+                android:id="@+id/second_option_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/test_tip_backgrounp"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="11dp"
-                    tools:background="@color/design_default_color_surface" />
-            </RelativeLayout>
-
+            </com.example.answer.view.ButtonSelectView>
             <LinearLayout
+                android:id="@+id/tip_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
-                android:background="@drawable/test_tip_backgrounp"
                 android:layout_marginTop="30dp"
                 >
+
+
                 <TextView
+                    android:id="@+id/tip_text"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:background="@drawable/test_button_selector"
-                    android:gravity="left|center_vertical"
-                    android:textColor="#444444"
+                    android:layout_height="wrap_content"
                     android:textSize="14dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
                     android:maxLines="3"
                     android:ellipsize="end"
-                    android:text="ahahaah炽热实施烧死是事实是实施海上hi上帝会hi上帝是hi哈迪斯ahhahahaha"/>
+                    />
 
-                <View
-                    android:id="@+id/line"
+                <RelativeLayout
+                    android:id="@+id/check_more_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#E5E5E5"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_toLeftOf="@+id/enter_icon"
-                    android:text="了解更多"
-                    android:textColor="#56C0FF"
-                    android:textSize="14dp"/>
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="8dp"
+                    >
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#E5E5E5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_toLeftOf="@+id/enter_icon"
+                        android:text="了解更多"
+                        android:textColor="#56C0FF"
+                        android:textSize="14dp"/>
 
 
-                <ImageView
-                    android:id="@+id/enter_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="16dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    <ImageView
+                        android:id="@+id/enter_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="16dp"
+                       />
+
+                </RelativeLayout>
+
 
             </LinearLayout>
-
-
-
-
-
 
         </LinearLayout>
 
